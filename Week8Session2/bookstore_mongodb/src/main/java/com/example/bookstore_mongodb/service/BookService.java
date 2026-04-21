@@ -24,4 +24,14 @@ public class BookService {
         return bookRepository.findAll();
     }
 
+    // check if book exists
+    public boolean existsById(String id) {
+        return bookRepository.existsById(id);
+    }
+
+    // delete book
+    public void deleteBook(String id) {
+        bookRepository.deleteById(id);
+    }
+
 }
